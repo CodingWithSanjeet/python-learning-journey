@@ -1,0 +1,4 @@
+Hello, there
+Welcome to the world of Pytho 🐍
+It's Great you are learning 🐍 Python
+See you ❤️

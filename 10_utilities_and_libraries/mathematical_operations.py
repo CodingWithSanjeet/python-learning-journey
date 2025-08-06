@@ -1,0 +1,7 @@
+list_nums = list(range(0,11))
+max_num = max(list_nums)
+min_num = min(list_nums)
+total_sum = sum(list_nums)
+print(f"Max : {max_num}")
+print(f"Min : {min_num}")
+print(f"Sum : {total_sum}")
