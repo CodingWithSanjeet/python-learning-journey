@@ -2,7 +2,34 @@
 
 A comprehensive collection of Python learning materials, practice exercises, and projects covering fundamental concepts to intermediate-level programming. All content is organized in a logical, progressive structure for effective learning.
 
+## 🚀 Quick Setup
+
+### Virtual Environment Setup
+
+Before starting, create a virtual environment to manage your Python dependencies:
+
+```bash
+# Create virtual environment
+py -m venv python_learning_env
+
+# Activate (Windows)
+python_learning_env\Scripts\activate
+
+# Activate (Linux/Mac)
+source python_learning_env/bin/activate
+
+# Install dependencies for projects
+pip install matplotlib pillow
+```
+
+For detailed setup instructions, see [`00_setup_and_environment/`](#00-setup--environment)
+
 ## 📁 Project Structure
+
+### 00. 🛠️ Setup & Environment (`00_setup_and_environment/`)
+Development environment setup and virtual environment management:
+- **`virtual_environment.py`** - Basic virtual environment demonstration with step-by-step comments
+- **`README.md`** - Comprehensive guide for Python environment setup, best practices, and troubleshooting
 
 ### 01. 🎯 Fundamentals (`01_fundamentals/`)
 Core Python concepts and building blocks:
@@ -77,6 +104,20 @@ Real-world applications and tools:
 #### File Organizer (`file_organizer/`)
 - **`automated_file_organizer.py`** - Utility for organizing files by extension into folders
 
+#### Image Watermark Tool (`image_watermark_tool/`)
+- **`watermark_images.py`** - Batch image watermarking application using PIL/Pillow
+- **`input_images/`** - Directory for original images to be watermarked
+- **`watermarked_images/`** - Output directory for processed images
+- **`super_nought.ttf`** - Custom font file for watermark text
+- **`requirements.txt`** - Project dependencies (Pillow)
+- **`README.md`** - Comprehensive usage and installation guide
+
+#### Weather Data Visualization (`weather_data_visualization/`)
+- **`weather_visualization.py`** - CSV weather data analysis and matplotlib visualization
+- **`data/weather.csv`** - Sample weather dataset for analysis
+- **`requirements.txt`** - Project dependencies (matplotlib)
+- **`README.md`** - Data format guide and customization instructions
+
 ### 10. 🛠️ Utilities & Libraries (`10_utilities_and_libraries/`)
 Working with Python's standard library:
 - **`datetime_operations.py`** - Date and time manipulation
@@ -87,6 +128,7 @@ Working with Python's standard library:
 
 This workspace covers:
 
+- **Development Environment**: Virtual environment setup, dependency management
 - **Python Fundamentals**: Variables, data types, operators
 - **Control Structures**: Conditionals, loops, iteration
 - **Functions**: Definition, parameters, return values, documentation
@@ -96,41 +138,73 @@ This workspace covers:
 - **Error Handling**: Try-catch blocks, custom exceptions
 - **Module System**: Imports, creating reusable modules
 - **Interactive Programming**: User input, game development
-- **Practical Applications**: File organization, data processing
+- **Data Visualization**: Matplotlib plotting, CSV data analysis
+- **Image Processing**: PIL/Pillow for image manipulation and watermarking
+- **Practical Applications**: File organization, data processing, real-world tools
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
-- Python 3.x installed on your system
+- Python 3.7 or higher installed on your system
 - Basic text editor or IDE (VS Code, PyCharm, etc.)
+
+### Setup Instructions
+
+1. **Environment Setup** (Recommended first step):
+   ```bash
+   # Create virtual environment
+   py -m venv python_learning_env
+   
+   # Activate virtual environment
+   python_learning_env\Scripts\activate  # Windows
+   # source python_learning_env/bin/activate  # Linux/Mac
+   ```
+
+2. **Install Project Dependencies**:
+   ```bash
+   # For all projects
+   pip install matplotlib pillow
+   
+   # Or install per project
+   cd 09_projects/image_watermark_tool && pip install -r requirements.txt
+   cd 09_projects/weather_data_visualization && pip install -r requirements.txt
+   ```
 
 ### Running the Examples
 
-1. **Basic Arithmetic Operations**:
+1. **Environment & Setup**:
    ```bash
-   python 07_modules_and_packages/arithmetic_module.py
+   python 00_setup_and_environment/virtual_environment.py
    ```
 
-2. **Interactive Applications**:
+2. **Fundamentals Practice**:
+   ```bash
+   python 01_fundamentals/01_variables_and_data_types/variables_and_data_types.py
+   python 01_fundamentals/02_functions_and_scope/functions_and_documentation.py
+   ```
+
+3. **Interactive Applications**:
    ```bash
    python 08_interactive_applications/quiz_game.py
    python 08_interactive_applications/travel_planner.py
    ```
 
-3. **File Organization Tool**:
+4. **Real-World Projects**:
    ```bash
+   # File organization
    python 09_projects/file_organizer/automated_file_organizer.py
+   
+   # Image watermarking (requires Pillow)
+   python 09_projects/image_watermark_tool/watermark_images.py
+   
+   # Weather data visualization (requires matplotlib)
+   python 09_projects/weather_data_visualization/weather_visualization.py
    ```
 
-4. **Module Import Examples**:
+5. **Module System**:
    ```bash
+   python 07_modules_and_packages/arithmetic_module.py
    python 07_modules_and_packages/module_import_examples.py
-   ```
-
-5. **Fundamentals Practice**:
-   ```bash
-   python 01_fundamentals/01_variables_and_data_types/variables_and_data_types.py
-   python 01_fundamentals/02_functions_and_scope/functions_and_documentation.py
    ```
 
 ## 📖 Key Features
@@ -155,10 +229,12 @@ Multiple examples of:
 - Travel itinerary planner with user input
 - Dynamic data collection and display
 
-### Utility Tools
-- File organizer that automatically sorts files by extension
-- Arithmetic operations module for reusable calculations
-- Random data generators and processors
+### Real-World Projects
+- **Image Watermark Tool**: Batch image processing with PIL/Pillow for adding text watermarks
+- **Weather Data Visualization**: CSV data analysis and matplotlib plotting for temperature trends
+- **File Organizer**: Automatically sorts files by extension into organized folders
+- **Arithmetic Module**: Reusable mathematical operations and calculations
+- **Random Data Generators**: Utilities for generating and processing random data
 
 ## 🎮 Interactive Examples
 
@@ -178,16 +254,17 @@ Plan your dream destinations with:
 
 ## 📝 Learning Path
 
-1. **Start with Basics**: Begin with `01_fundamentals/` - variables, data types, and functions
-2. **Control Flow**: Master `02_control_structures/` - conditionals and loops
-3. **Data Structures**: Practice with `03_data_structures/` - lists, tuples, and dictionaries
-4. **File Operations**: Learn I/O with `04_file_operations/` - text and JSON files
-5. **Error Handling**: Understand `05_error_handling/` - exception management
-6. **OOP Concepts**: Study `06_object_oriented_programming/` - classes and inheritance
-7. **Modules**: Explore `07_modules_and_packages/` - code organization
-8. **Interaction**: Build `08_interactive_applications/` - user-facing programs
-9. **Projects**: Create `09_projects/` - practical applications
-10. **Libraries**: Use `10_utilities_and_libraries/` - standard library features
+1. **Environment Setup**: Start with `00_setup_and_environment/` - virtual environments and project setup
+2. **Python Basics**: Begin with `01_fundamentals/` - variables, data types, and functions
+3. **Control Flow**: Master `02_control_structures/` - conditionals and loops
+4. **Data Structures**: Practice with `03_data_structures/` - lists, tuples, and dictionaries
+5. **File Operations**: Learn I/O with `04_file_operations/` - text and JSON files
+6. **Error Handling**: Understand `05_error_handling/` - exception management
+7. **OOP Concepts**: Study `06_object_oriented_programming/` - classes and inheritance
+8. **Modules**: Explore `07_modules_and_packages/` - code organization
+9. **Interaction**: Build `08_interactive_applications/` - user-facing programs
+10. **Real Projects**: Create `09_projects/` - image processing, data visualization, automation
+11. **Standard Library**: Use `10_utilities_and_libraries/` - built-in Python features
 
 ## 🤝 Contributing
 
